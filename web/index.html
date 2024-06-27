@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    span {
+      color: #1f4871;
+      font-size: 20px;
+      font-family: sans-serif;
+      position: relative;
+      font-weight: bold;
+      display: block;
+      -o-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      left: 50%;
+      bottom: -120px;
+    }
+
+    #container {
+      position: fixed;
+      width: 100px;
+      height: 100px;
+      -o-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 50%;
+    }
+
+    #one {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 50%;
+      -o-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      animation: one 2s infinite;
+      -o-animation: one 2s infinite;
+      -webkit-animation: one 2s infinite;
+      -ms-animation: one 2s infinite;
+      -moz-animation: one 2s infinite;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      background-color: #1f4871;
+    }
+
+    #two {
+      width: 0px;
+      height: 0px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 50%;
+      -o-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      animation: two 2s infinite;
+      -o-animation: two 2s infinite;
+      -moz-animation: two 2s infinite;
+      -webkit-animation: two 2s infinite;
+      -ms-animation: two 2s infinite;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      background-color: #1f4871;
+    }
+
+
+    @keyframes one {
+      0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+      }
+
+
+      100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+
+    @keyframes two {
+      0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+      }
+
+      50% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+      }
+
+      100% {
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <!-- <base href="https://github.com/ravigadhiyaflexion.github.io/flutter_web_app/"> -->
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="flutter_web_dashboard">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <title>flutter_web_dashboard</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    var serviceWorkerVersion = null;
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+
+<body>
+  <script>
+    window.addEventListener('load', function (ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function (engineInitializer) {
+          engineInitializer.initializeEngine().then(function (appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    }); 
+  </script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBQiAi2tBNGR4OByrs2Am1wGkuWorREW28",
+      authDomain: "admin-portfolio-template.firebaseapp.com",
+      projectId: "admin-portfolio-template",
+      storageBucket: "admin-portfolio-template.appspot.com",
+      messagingSenderId: "702670570563",
+      appId: "1:702670570563:web:2b56e56e021ac0a11980f6",
+      measurementId: "G-ER3988LSD4"
+      // apiKey: "AIzaSyBYfcWNpA-RUtqaA_cwsa3k1-6oHPzWsIo",
+      // authDomain: "portfolio-web-ad6f6.firebaseapp.com",
+      // projectId: "portfolio-web-ad6f6",
+      // storageBucket: "portfolio-web-ad6f6.appspot.com",
+      // messagingSenderId: "952845585342",
+      // appId: "1:952845585342:web:b4ee5b7ffb31a3c570c7ef",
+      // measurementId: "G-5LMH0CYRDG"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+
+  <div id="container">
+    <div id="one"></div>
+    <div id="two"></div>
+  </div>
+
+</body>
+
+</html>
